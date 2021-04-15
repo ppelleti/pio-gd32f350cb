@@ -82,12 +82,12 @@ void toggle_led()
     GPIO_OCTL(LED1_GPIO_PORT) ^= LED1_PIN;
 }
 
-//Use USART1 on PA2, PA3 for connection on main board
-#define EVAL_COM1 USART1
-#define EVAL_COM1_CLK RCU_USART1
+//Use USART0 on PA9, PA10 for connection on main board
+#define EVAL_COM1 USART0
+#define EVAL_COM1_CLK RCU_USART0
 
-#define EVAL_COM1_TX_PIN GPIO_PIN_2
-#define EVAL_COM1_RX_PIN GPIO_PIN_3
+#define EVAL_COM1_TX_PIN GPIO_PIN_9
+#define EVAL_COM1_RX_PIN GPIO_PIN_10
 
 #define EVAL_COM_GPIO_PORT GPIOA
 #define EVAL_COM_GPIO_CLK RCU_GPIOA
