@@ -40,9 +40,9 @@ OF SUCH DAMAGE.
 #include "main.h"
 
 /* output test pin 1 */
-#define LED1_PIN            GPIO_PIN_0
-#define LED1_GPIO_PORT      GPIOA
-#define LED1_GPIO_CLK       RCU_GPIOA
+#define LED1_PIN            GPIO_PIN_2
+#define LED1_GPIO_PORT      GPIOB
+#define LED1_GPIO_CLK       RCU_GPIOB
 
 /* ooutput test pin 2*/
 #define LED2_GPIO_PORT      GPIOB
