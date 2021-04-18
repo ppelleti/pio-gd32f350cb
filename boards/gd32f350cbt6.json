@@ -31,10 +31,10 @@
         "jlink",
         "stlink",
         "blackmagic",
-        "mbed"
+        "mbed",
+        "serial"
       ]
     },
     "url": "https://www.gigadevice.com/microcontroller/gd32f350cbt6/",
     "vendor": "GigaDevice"
   }
-  
