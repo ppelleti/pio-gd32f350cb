@@ -82,12 +82,12 @@ void toggle_led()
     GPIO_OCTL(LED1_GPIO_PORT) ^= LED1_PIN;
 }
 
-//Use USART0 on PA9, PA10 for connection on main board
-#define EVAL_COM1 USART0
-#define EVAL_COM1_CLK RCU_USART0
+//Use USART1 on PA2, PA3 for connection on main board
+#define EVAL_COM1 USART1
+#define EVAL_COM1_CLK RCU_USART1
 
-#define EVAL_COM1_TX_PIN GPIO_PIN_9
-#define EVAL_COM1_RX_PIN GPIO_PIN_10
+#define EVAL_COM1_TX_PIN GPIO_PIN_2
+#define EVAL_COM1_RX_PIN GPIO_PIN_3
 
 #define EVAL_COM_GPIO_PORT GPIOA
 #define EVAL_COM_GPIO_CLK RCU_GPIOA
@@ -171,17 +171,17 @@ int main(void)
     {
         toggle_led();
         //leightweight
-        print_str("Test string for UART! Blinky blinky\n");
+        print_str("Test string for UART! Blinky blinky\r\n");
         //uses large printf() implementation
         //printf("Testing printf() function\n");
         delay_1ms(1000);
-        /*if (gpio_input_bit_get(SENSOR1_GPIO_Port, SENSOR1_Pin) == RESET) {
-			print_str("PA4 = 0\n");
+        if (gpio_input_bit_get(SENSOR1_GPIO_Port, SENSOR1_Pin) == RESET) {
+			print_str("PA4 = 0\r\n");
 			gpio_bit_set(LED2_GPIO_PORT, LED2_PIN);
 		} else {
-			print_str("PA4 = 1\n");
+			print_str("PA4 = 1\r\n");
 			gpio_bit_reset(LED2_GPIO_PORT, LED2_PIN);
-		}*/
+		}
     }
     return 0; //never reached but for safety
 }
