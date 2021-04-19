@@ -32,7 +32,8 @@
         "stlink",
         "blackmagic",
         "mbed",
-        "serial"
+        "serial",
+        "cmsis-dap"
       ]
     },
     "url": "https://www.gigadevice.com/microcontroller/gd32f350cbt6/",

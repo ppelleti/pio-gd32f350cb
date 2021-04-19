@@ -70,7 +70,7 @@ void init_led()
     GPIO_BC(LED2_GPIO_PORT) = LED2_PIN; /* clear port / set to 0*/
 
     //GPIOA already turned on for this sensor pin
-    //rcu_periph_clock_enable(RCU_GPIOA);
+    rcu_periph_clock_enable(RCU_GPIOA);
     /* configure GPIO port */
     rcu_periph_clock_enable(RCU_CFGCMP);
     gpio_mode_set(SENSOR1_GPIO_Port, GPIO_MODE_INPUT, GPIO_PUPD_NONE,
